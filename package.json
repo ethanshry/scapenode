@@ -1,0 +1,23 @@
+{
+  "name": "scapenode",
+  "version": "1.0.0",
+  "description": "Repo for testing NodeJS deployments on the Kraken App Platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ethanshry/scapenode.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ethanshry/scapenode/issues"
+  },
+  "homepage": "https://github.com/ethanshry/scapenode#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
