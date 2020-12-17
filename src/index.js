@@ -7,7 +7,7 @@ app.get("/", (req, res) => {
 
 app.get("/route/:name", (req, res) => {
   console.log(req.params.name);
-  res.send("ping " + req.params.name);
+  res.send("ping " + req.params.name + " :D");
 });
 
 app.listen(7211, () => {
