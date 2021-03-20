@@ -36,7 +36,7 @@ app.get("/route/:name", (req, res) => {
   res.send(makeHtml("ping " + req.params.name + " :D"));
 });
 
-app.get("/route/:new", (req, res) => {
+app.get("/new/:new", (req, res) => {
   console.log("New route hit, responding:");
   console.log(`New parameter: ${req.params.new}`);
   res.send(makeHtml("ping new route with param " + req.params.new + " :D"));
