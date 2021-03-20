@@ -1,12 +1,38 @@
 const express = require("express");
 let app = express();
 
+function makeHtml(text) {
+  let result = `
+  <body>
+    <h1>${text}<h2>
+  </body>
+  <style>
+    h1 {
+      font-family: Arial;
+      text-align: center;
+      width: 100%;
+      text-transform: capitalize;
+    }
+    body {
+      background-color: lightblue;
+      display: flex;
+      height: 100vh;
+      flex-direction: row;
+      align-items: center;
+    }
+  </style>
+  `;
+  return result;
+}
+
 app.get("/", (req, res) => {
-  res.send("hello world!");
+  console.log("Index route hit, responding");
+  res.send(makeHtml("hello from nodeJS!"));
 });
 
 app.get("/route/:name", (req, res) => {
-  console.log(req.params.name);
+  console.log("Name route hit, responding:");
+  console.log(`Name parameter: ${req.params.name}`);
   res.send("ping " + req.params.name + " :D");
 });
 
