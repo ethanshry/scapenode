@@ -33,7 +33,7 @@ app.get("/", (req, res) => {
 app.get("/route/:name", (req, res) => {
   console.log("Name route hit, responding:");
   console.log(`Name parameter: ${req.params.name}`);
-  res.send("ping " + req.params.name + " :D");
+  res.send(makeHtml("ping " + req.params.name + " :D"));
 });
 
 app.listen(7211, () => {
